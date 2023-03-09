@@ -1,0 +1,155 @@
+:root {
+    --white: #F2F7F2;
+    --blue: #19297C;
+    --text-color: #000;
+    --a-color: #EC4E20;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.static {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(img/background5.jpg) no-repeat center center;    
+    background-size: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: -1;
+}
+
+.static h2, .static p {
+    margin: 20px;
+    color: var(--white);
+}
+
+.static h2 {
+    font-size: 60px;
+    width: 50%;
+    margin: 20px;
+}
+
+.static p {
+    width: 70%;
+    font-size: 25px;
+}
+
+.static a {
+    border: none;
+    padding: 15px;
+    margin: 20px;
+    color: var(--blue);
+    background-color: var(--white);
+    border-radius: 10px;
+    font-weight: 300;
+    transition: all ease 0.2s;
+}
+
+.static a:hover {
+    font-size: 18px;
+}
+
+header, main, footer  {
+    background-color: var(--white);
+    background-size: contain;
+    z-index: 1;
+    width: 100%;
+}
+
+header nav, main section, footer p {
+    margin: 0 15%;
+}
+
+header {
+    margin: 100vh 0 0 0;
+    padding: 40px 0;
+    font-size: 20px;
+    /* position: sticky;
+    top: 0px; esto es pa que la barrita se quede pegada arriba*/
+}
+
+header nav {
+    padding: 5px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px black;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+header nav ul li a:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+main section {
+    padding: 2em 0;
+}
+
+#studies {
+    margin-top: 0;
+}
+
+#contact {
+    margin-bottom: 0;
+}
+
+main section h1 {
+    margin-bottom: 1em;
+    font-size: 40px;
+    text-align: left;
+}
+
+main section p, main section ul {
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0 3em;
+}
+
+main section a {
+    color: var(--a-color)
+}
+
+main section a:hover {
+    font-weight: bold;
+}
+
+#languages li {
+    margin-left: 1.5em;
+    list-style-type: disc;
+}
+
+@media screen and (max-width: 950px) { /*En este punto la navbar se empieza a atachar*/
+    #header {overflow-x: hidden; visibility: collapse;}
+}
